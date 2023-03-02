@@ -1,0 +1,541 @@
+:root{
+/**** COLORES PRINCIPALES ****/
+    --main: #000000;
+    --complement: #660066;
+    --contrast-dark: #48042f5d;
+    --contrast-light:#ffccff;
+
+    --white-color: white;
+
+/**** TIPOGGRAFIA ****/
+    --main-font:'Titillium', sans-serif;
+
+    --light: 150;
+    --normal: 300;
+    --bold: 600;
+}
+
+/**** GLOBAL SETTINGS ****/
+h1, h2, h3, h4, h5, h6, p, a, span {
+    color: var(--dark-contrast-color);
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.light {
+    font-weight: var(--light);
+}
+
+.normal {
+    font-weight: var(--normal);
+}
+
+.bold {
+    font-weight: var(--bold);
+}
+
+/**** RESET CHROME STYLE ****/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+}
+
+/****-------- PHONE SCREEN 0px a 764px --------****/
+
+/*** SLIDER BAR ***/
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 1/2;
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.pagina1 {
+    width: 100vw;
+}
+
+
+/**** PHONE SCREEN ****/
+
+/*** PAGINA WEB ***/
+.banner {
+    height: 250px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 0 0 25px 25px;
+    background: linear-gradient(140deg, #660066 0%, #330033 50%, #000000 75%);
+    opacity: 0.90;
+    display: grid;
+}
+
+.banner__title h1 {
+    font-size: xx-large;
+    color: var(--white-color);
+    margin: 5px 10px;
+}
+
+.banner__title h2 {
+    font-size: smaller;
+    font-weight: var(--light);
+    color: var(--white-color);
+    margin: 5px 12px;
+}
+
+.banner__img img{
+    width: 40%;
+    height: auto;
+    padding: 2px;
+    float: right;
+    border-radius: 25px;
+}
+
+.banner__img button {
+    font-size: 15px;
+    background-color: var(--complement);
+    border: 2px;
+    border-radius: 1rem;
+}
+
+/**** Sobre mi / Habilidades ****/
+.section {
+    padding: 30px;
+    height:inherit;
+}
+
+.section__title h3 {
+    font-size: large;
+    margin-bottom: 2rem;
+}
+
+.programming__skills {
+    display: grid;
+    gap: 25px;
+}
+
+.section__skill {
+    background-color:var(--contrast-light);
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.skill__txt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .10rem;
+}
+
+.skill__txt h4 {
+    text-transform: uppercase;
+}
+
+.skill__load_ext {
+    width: 100%;
+    background-color: var(--contrast-dark);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 1rem;
+}
+
+.skill__load_int {
+    height: 7px;
+    background-color: var(--main);
+    border-radius: 1rem;
+}
+
+.programming__skills .section__skill:nth-child(1) .skill__load_int {
+    width: 95%;
+}
+
+.programming__skills .section__skill:nth-child(2) .skill__load_int {
+    width: 80%;
+}
+
+.programming__skills .section__skill:nth-child(3) .skill__load_int {
+    width: 75%;
+}
+
+.programming__skills .section__skill:nth-child(4) .skill__load_int {
+    width: 50%;
+}
+
+
+/**** Informacion Personal ****/
+.inf__name h3 {
+    font-size: large;
+    margin-bottom: .5rem;
+    padding: 30px;
+    height: inherit;
+    font-weight: var(--bold);
+}
+
+.inf__li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.inf__icon i {
+    font-size: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.inf__txt p:nth-child(1) {
+    font-size: medium;
+}
+
+.inf__txt p:nth-child(2) {
+    font-size: medium;
+    font-weight: var(--bold);
+}
+
+
+
+/**** Informacion Profesional ****/
+.inf_prof_title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.inf_prof_title h3 {
+    font-size: large;
+    margin-bottom: .5rem;
+    padding: 30px 30px 0.5px 30px;
+    height: inherit;
+    font-weight: var(--bold);
+}
+
+.inf_prof_txt {
+    margin-bottom: 2px;
+    padding: 1rem;
+    font-size: 14px;
+    font-weight: var(--light);
+}
+
+
+/**** Formacion Academica ****/
+.inf__academica_title h3 {
+    font-size: large;
+    margin-bottom: 5px;
+    padding: 30px 30px 0.5px 30px;
+    height: inherit;
+    font-weight: var(--bold);
+}
+
+.studies table {
+    font-size: 13px;
+    font-weight: var(--light);
+    margin-bottom: 75px;
+    padding: 1rem;
+}
+
+.studies__year {
+    font-weight: var(--bold);
+    padding-right: 15px;
+}
+
+/**** Social Media y Contacto ****/
+.rrss {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: calc(1000% - 40px);
+}
+.rrss__txt {
+    background-color: var(--main);
+    padding: .4rem 1rem .25rem 1rem;
+    border-radius: 1rem 1rem 0 0 ;
+    box-shadow: 0 0 10px var(--complement);
+}
+
+.rrss__txt p {
+    font-size: small;
+    color: var(--contrast-light);
+}
+
+.rrss__icons {
+    background-color: var(--contrast-light);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 3.5rem;
+    padding: .35rem;
+    border-radius: .5rem;
+}
+
+.rrss__icons a {
+    color: var(--main);
+    font-size: 1.5rem;
+}
+
+
+
+/****-------- TABLET SCREEN 764px a 1024px --------****/
+@media screen and (min-width: 764px) {
+    /*** PAGINA WEB ***/
+    .banner {
+        height: 35%;
+        padding: 40px;
+        border-radius: 0 0 40px 40px;
+    }
+
+    .banner__title h1 {
+        font-size: xx-large;
+    }
+
+    .banner__title h2 {
+        font-size: larger;
+    }
+
+    .banner__img img {
+        width: 50%;
+        height: auto;
+    }
+
+
+
+    .section {
+        padding: 40px;
+        height: auto;
+    }
+
+    .section__title h3 {
+        font-size: larger;
+        margin-bottom: 1rem;
+    }
+
+
+
+    .programming__skills {
+        display: grid;
+        gap: 30px;
+    }
+
+    .section__skill {
+        border-radius: 25px;
+    }
+
+    .skill__txt {
+        margin: .50rem;
+    }
+
+    .skill__txt h4, .skill__txt span {
+        font-size: large;
+    }
+
+    .skill__load_int {
+        height: 9px;
+    }
+
+
+
+    .inf__name h3 {
+        font-size: larger;
+    }
+
+    .inf__icon i {
+        font-size: 30px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .inf__txt p:nth-child(1) {
+        font-size: large;
+    }
+
+    .inf__txt p:nth-child(2) {
+        font-size: large;
+    }
+
+
+    .inf_prof_title h3 {
+        font-size: larger;
+
+    }
+
+    .inf_prof_txt {
+        font-size: 20px;
+    }
+
+
+
+    .inf__academica_title h3 {
+        font-size: larger;
+    }
+
+    .studies table {
+        font-size: 20px;
+        margin-bottom: 400px;
+    }
+
+
+    .rrss {
+        position: fixed;
+        bottom: 2rem;
+        display: flex;
+        min-width: calc(1000% - 40px);
+    }
+
+    .rrss__txt {
+        padding: 1rem 2rem 1rem 2rem;
+        border-radius: 2rem 2rem 0 0 ;
+    }
+
+    .rrss__txt p {
+        font-size: larger;
+    }
+
+    .rrss__icons {
+        gap: 4.5rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .rrss__icons a {
+        font-size: 3rem;
+    }
+
+}
+
+
+/****-------- DESKTOP SCREEN 1024px a + --------****/
+
+@media screen and (min-width: 1024px){
+
+    .banner {
+        border-radius: 0 0 75px 75px;
+    }
+
+    .banner__title h1 {
+        font-size: 120px;
+    }
+
+    .banner__title h2 {
+        font-size: 90px;
+    }
+
+    .banner__img img {
+        width: 25%;
+        height: auto;
+    }
+
+
+
+    .section {
+        padding: 50px;
+        height: auto;
+    }
+
+    .section__title h3 {
+        font-size: 50px;
+        margin-bottom: 1rem;
+    }
+
+
+
+    .programming__skills {
+        display: grid;
+        gap: 50px;
+    }
+
+    .section__skill {
+        border-radius: 30px;
+    }
+
+    .skill__txt {
+        margin: 1rem;
+    }
+
+    .skill__txt h4, .skill__txt span {
+        font-size: 40px;
+    }
+
+    .skill__load_int {
+        height: 15px;
+    }
+
+
+
+    .inf__name h3 {
+        font-size: 50px;
+    }
+
+    .inf__icon i {
+        font-size: 50px;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .inf__txt p:nth-child(1) {
+        font-size: 40px;
+    }
+
+    .inf__txt p:nth-child(2) {
+        font-size: 40px;
+    }
+
+
+    .inf_prof_title h3 {
+        font-size: 50px;
+
+    }
+
+    .inf_prof_txt {
+        font-size: 40px;
+    }
+
+
+
+    .inf__academica_title h3 {
+        font-size: 50px;
+    }
+
+    .studies table {
+        font-size: 40px;
+        margin-bottom: 600px;
+
+    }
+
+
+
+    .rrss {
+        position: fixed;
+        bottom: 5rem;
+        display: flex;
+        min-width: calc(1000% - 40px);
+    }
+
+    .rrss__txt {
+        padding: 2rem 3rem 2rem 3rem;
+        border-radius: 4rem 4rem 0 0 ;
+    }
+
+    .rrss__txt p {
+        font-size: 59px;
+    }
+
+    .rrss__icons {
+        gap: 20rem;
+        border-radius: 0 0 1rem 1rem;
+    }
+
+    .rrss__icons a {
+        font-size: 48px;
+    }
+
+
+}
